@@ -1,10 +1,17 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <script type="text/javascript" src="angular.min.js"></script>
+    <script type="text/javascript" src="app.js"></script>
     <meta charset="utf-8">
     <title>Hello coursera</title>
   </head>
-  <body>
-    <div>Hola</div>
+  <body ng-app="Mod1App">
+    <h1>Module 1</h1>
+    <div ng-controller="Mod1Controller">
+      <input type="text" ng-model="inputText">
+      <button ng-click="writeText()">Check If Too Much</button>
+      <p ng-style="myStyle">{{outputText}}</p>
+    </div>
   </body>
 </html>
