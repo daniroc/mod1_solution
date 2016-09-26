@@ -9,9 +9,9 @@
   <body ng-app="Mod1App">
     <h1>Module 1</h1>
     <div ng-controller="Mod1Controller">
-      <input type="text" ng-model="inputText">
+      <input type="text" ng-model="inputText" ng-style="inputStyle">
       <button ng-click="writeText()">Check If Too Much</button>
-      <p ng-style="myStyle">{{outputText}}</p>
+      <p ng-style="pStyle">{{outputText}}</p>
     </div>
   </body>
 </html>

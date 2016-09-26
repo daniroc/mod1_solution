@@ -6,7 +6,8 @@ angular.module("Mod1App",[])
 Mod1Controller.$inject = ['$scope'];
 function Mod1Controller($scope){
   $scope.inputText = "";
-  $scope.myStyle = "";
+  $scope.pStyle = "";
+  $scope.inputStyle = "";
   $scope.outputText = "";
   $scope.writeText = function(){
     var wordsNumber = 0;
@@ -17,13 +18,16 @@ function Mod1Controller($scope){
       }
     }
     if($scope.inputText.replace(/,/g,"").trim().length<1){
-      $scope.myStyle={color:'red',border:'2px solid red',width:'150px'}
+      $scope.pStyle={color:'red'}
+      $scope.inputStyle={border:'2px solid red'}
       $scope.outputText = "Please enter data first";
     }else if(wordsNumber<4){
-      $scope.myStyle={color:'green',border:'2px solid green',width:'150px'}
+      $scope.pStyle={color:'green'}
+      $scope.inputStyle={border:'2px solid green'}
       $scope.outputText = "Enjoy!";
     }else{
-      $scope.myStyle={color:'green',border:'2px solid green',width:'150px'}
+      $scope.pStyle={color:'green'}
+      $scope.inputStyle={border:'2px solid green'}
       $scope.outputText = "Too much!";
     }
   }
